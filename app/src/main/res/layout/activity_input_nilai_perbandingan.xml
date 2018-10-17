@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="?attr/colorPrimary"
+        android:elevation="7dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/AppTheme.LogoActionBar"
+        android:title=""
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp">
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
+                android:text="Rekomendasi"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/back"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/back"
+                android:onClick="back" />
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/scrollUtama"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/layoutForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textJudul"
+                    android:layout_width="252dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
+                    android:foregroundGravity="center"
+                    android:gravity="center"
+                    android:text="Tentukan Bobot Kepentingan Pada Masing-masing Kriteria"
+                    android:textColor="@android:color/black" />
+
+                <LinearLayout
+                    android:id="@+id/layoutSeek"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView23"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Mutlak Penting (9)"
+                            android:textSize="10sp" />
+
+                        <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+                            android:layout_width="match_parent"
+                            android:layout_height="400dp"
+                            android:layout_weight="1">
+
+                            <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBar
+                                android:id="@+id/mySeekBar"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:max="8"
+                                android:progress="0"
+                                android:progressDrawable="@drawable/custom_seekbar"
+                                android:splitTrack="false"
+                                android:thumb="@drawable/thumb_image"
+                                app:seekBarRotation="CW270" />
+
+                            <!-- Rotation: CW90 or CW270 -->
+                        </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+
+                        <TextView
+                            android:id="@+id/textView27"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Sama Penting (1)"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/textView28"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="Harga"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView24"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Mutlak Penting (9)"
+                            android:textSize="10sp" />
+
+                        <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+                            android:layout_width="match_parent"
+                            android:layout_height="400dp"
+                            android:layout_weight="1">
+
+                            <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBar
+                                android:id="@+id/mySeekBar2"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:max="8"
+                                android:progress="0"
+                                android:progressDrawable="@drawable/custom_seekbar"
+                                android:splitTrack="false"
+                                android:thumb="@drawable/thumb_image"
+                                app:seekBarRotation="CW270" />
+
+                            <!-- Rotation: CW90 or CW270 -->
+                        </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+
+                        <TextView
+                            android:id="@+id/textView29"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Sama Penting (1)"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/textView30"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="Jarak"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView25"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Mutlak Penting (9)"
+                            android:textSize="10sp" />
+
+                        <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+                            android:layout_width="match_parent"
+                            android:layout_height="400dp"
+                            android:layout_weight="1">
+
+                            <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBar
+                                android:id="@+id/mySeekBar3"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:max="8"
+                                android:progress="0"
+                                android:progressDrawable="@drawable/custom_seekbar"
+                                android:splitTrack="false"
+                                android:thumb="@drawable/thumb_image"
+                                app:seekBarRotation="CW270" />
+
+                            <!-- Rotation: CW90 or CW270 -->
+                        </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+
+                        <TextView
+                            android:id="@+id/textView36"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Sama Penting (1)"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/textView37"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="Populeritas"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:background="@color/white"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView26"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Mutlak Penting (9)"
+                            android:textSize="10sp" />
+
+                        <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+                            android:layout_width="match_parent"
+                            android:layout_height="400dp"
+                            android:layout_weight="1">
+
+                            <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBar
+                                android:id="@+id/mySeekBar4"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:max="8"
+                                android:progress="0"
+                                android:progressDrawable="@drawable/custom_seekbar"
+                                android:splitTrack="false"
+                                android:thumb="@drawable/thumb_image"
+                                app:seekBarRotation="CW270" />
+
+                            <!-- Rotation: CW90 or CW270 -->
+                        </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+
+                        <TextView
+                            android:id="@+id/textView35"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Sama Penting (1)"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/textView33"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="Rating"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/button_round"
+                    android:onClick="setFilter"
+                    android:text="Proses"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutFilter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/layoutForm"
+                android:layout_margin="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/filterHarga"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="Harga (Rp)"
+                        android:inputType="number"
+                        android:visibility="gone" />
+
+                    <Switch
+                        android:id="@+id/switch1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="MIN"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/filterJarak"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="Jarak (Km)"
+                        android:inputType="number"
+                        android:visibility="gone" />
+
+                    <Switch
+                        android:id="@+id/switch2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="MIN"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/filterPopuleritas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="Populeritas"
+                        android:inputType="number"
+                        android:visibility="gone" />
+
+                    <Switch
+                        android:id="@+id/switch3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="MIN"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/filterRating"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="Rating (Skala 0-5)"
+                        android:inputType="numberDecimal"
+                        android:visibility="gone" />
+
+                    <Switch
+                        android:id="@+id/switch4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="MIN"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/buttonProses"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_round"
+                    android:onClick="myPosition"
+                    android:text="Cari Tempat Rental"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:textColor="@android:color/white"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
